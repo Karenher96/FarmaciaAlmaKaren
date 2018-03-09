@@ -1,0 +1,88 @@
+﻿<Window x:Class="Menu.Productos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Menu"
+        mc:Ignorable="d"
+        Title="Productos" Height="600" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="auto" MinHeight="142"/>
+            <RowDefinition Height ="auto" MinHeight="114"/>
+            <RowDefinition Height ="156*"/>
+            <RowDefinition Height ="auto"/>
+            <RowDefinition Height ="auto"/>
+            <RowDefinition Height ="157*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="fondo1_jpg" Grid.RowSpan="6" Source="Imagenes/fondo1.jpg" Stretch="Fill"/>
+        <WrapPanel  Orientation="Vertical" Margin="0,0,0,66" Grid.Row="0" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal">
+                <Label Width="160" Margin="2" Content="Nombre del Medicamento"/>
+                <TextBox Height="30" Width="115" Margin="4" x:Name="NombreMedicamento"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="160" Margin="2" Content="Descripcion"/>
+                <TextBox Height="30" Width="115" Margin="4" x:Name="Descripcion"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="160" Margin="2" Content="Precio de compra"/>
+                <TextBox Height="30" Width="115" Margin="4" x:Name="PrecioCompra"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="160" Margin="2" Content="Precio de venta"/>
+                <TextBox Height="30" Width="115" Margin="4" x:Name="PrecioVenta"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Width="160" Margin="2" Content="Presentacion"/>
+                <TextBox Height="30" Width="115" Margin="4" x:Name="Presentacion"/>
+            </StackPanel>
+        </WrapPanel>
+        <WrapPanel Grid.Row="1" Orientation="Horizontal" Margin="10,54,-10,102" Grid.RowSpan="2">
+            <Button  Margin="4" Width="90" x:Name="btnRegresar" Click="btnRegresar_Click_1" Background="Tan" Foreground="DarkBlue">
+                <StackPanel>
+                    <Label Content="Regresar"/>
+                    <Image Source="/Imagenes/regresar.jpg"></Image>
+                    <Image/>
+                </StackPanel>
+            </Button>
+            <Button Margin="4" Width="90" x:Name="btnEliminar" Click="btnEliminar_Click" Background="CadetBlue" Foreground="Beige">
+                <StackPanel>
+                    <Label Content="Eliminar"/>
+                    <Image Source="/Imagenes/eliminar.jpg"></Image>
+                    <Image/>
+                </StackPanel>
+            </Button>
+            <Button Margin="4" Width="90" x:Name="btnGuardar" Click="btnGuardar_Click" Background="Violet" Foreground="DarkViolet">
+                <StackPanel>
+                    <Label Content="Guardar"/>
+                    <Image Source="/Imagenes/guardar.jpg"></Image>
+                    <Image/>
+                </StackPanel>
+            </Button>
+            <Button Margin="4" Width="90" x:Name="btnNuevo" Click="btnNuevo_Click" Background="CadetBlue" Foreground="Beige">
+                <StackPanel>
+                    <Label Content="Nuevo"/>
+                    <Image Source="/Imagenes/add.png"></Image>
+                    <Image/>
+                </StackPanel>
+            </Button>
+            <Button Margin="4" Width="90" x:Name="btnCancelar" Click="btnCancelar_Click" Background="Violet" Foreground="DarkViolet">
+                <StackPanel>
+                    <Label Content="Cancelar"/>
+                    <Image Source="/Imagenes/cancelar.png"></Image>
+                    <Image/>
+                </StackPanel>
+            </Button>
+            <Button Margin="4" Width="90" x:Name="btnEditar" Click="btnEditar_Click" Background="CadetBlue" Foreground="Beige">
+                <StackPanel>
+                    <Label Content="Editar"/>
+                    <Image Source="/Imagenes/editar.jpg"></Image>
+                    <Image/>
+                </StackPanel>
+            </Button>
+        </WrapPanel>
+
+        <DataGrid x:Name="ProductosTabla" Grid.Row="2" Margin="0,54,0,0" />
+    </Grid>
+</Window>

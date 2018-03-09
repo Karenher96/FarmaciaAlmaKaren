@@ -1,0 +1,55 @@
+﻿<Window x:Class="Menu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Menu"
+        mc:Ignorable="d"
+        Title="Mi querido enfermito" Height="350" Width="525">
+    <Window.Background>
+        <ImageBrush ImageSource="Imagenes/fondo2.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="auto"/>
+            <RowDefinition Height ="auto"/>
+            <RowDefinition Height ="auto"/>
+            <RowDefinition Height ="auto"/>
+            <RowDefinition Height ="*"/>
+        </Grid.RowDefinitions>
+        <Label HorizontalAlignment="Center" Grid.Row="6" Width="200" Grid.Column="0" Height="28" Margin="164,51,159,0" VerticalAlignment="Top" Background="Blue" Foreground="White">
+            Farmacia "Mi Querido Enfermito"
+        </Label>
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Vertical" Margin="119,77,89,77" Grid.RowSpan="4" Width="309">
+            <Button Margin="18" Width="90" x:Name="Categorias" Click="Categorias_Click" Background="Wheat
+                    ">
+                <StackPanel>
+                    <Label Foreground="Blue" >Categorias</Label>
+                    <Image></Image>
+                    <Image Source="/Imagenes/venta1.Gif"></Image>
+                </StackPanel>
+            </Button>
+            <Button Margin="18" Width="90" x:Name="btnEmpleado" Click="btnEmpleado_Click" Background="DarkSalmon">
+                <StackPanel>
+                    <Label Foreground="Beige">Empleado</Label>
+                    <Image></Image>
+                    <Image Source="/Imagenes/empleados.jpg"></Image>
+                </StackPanel>
+            </Button>
+            <Button Margin="18" Width="90" x:Name="Productos" Click="Productos_Click" Background="DarkSalmon">
+                <StackPanel>
+                    <Label Foreground="Beige">Productos</Label>
+                    <Image></Image>
+                    <Image Source="/Imagenes/productos.jpg"></Image>
+                </StackPanel>
+            </Button>
+            <Button Margin="18" Width="90" x:Name="Clientes" Click="Clientes_Click" Background="Wheat">
+                <StackPanel>
+                    <Label Foreground="Blue">Clientes</Label>
+                    <Image></Image>
+                    <Image Source="/Imagenes/clientes.jpg"></Image>
+                </StackPanel>
+            </Button>
+        </WrapPanel>
+    </Grid>
+</Window>
